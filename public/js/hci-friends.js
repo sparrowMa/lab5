@@ -10,7 +10,18 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
+
+
+	// this block must be put inside the initializePage() function...
+	$(".friendDiv h3").click(function(e){
+		// console.log("test");
+		e.preventDefault();
+		// console.log($(this).text());
+		$(this).text(anagrammedName($(this).text()));
+	});
 }
+
+
 
 function anagrammedName(name) {
 	// Thanks, Internet Anagram Server!
